@@ -65,3 +65,20 @@
 ;;   :on-path "themes")
 
 ;;
+
+(define-resource topic ()
+  :class (s-prefix "leuven:Topic")
+  :properties `((:title :string ,(s-prefix "dct:title")))
+  :has-many `((value :via ,(s-prefix "ext:hasTopic")
+                     :inverse t
+                     :as "values"))
+  :resource-base (s-url "http://stad.tenforce.com/topics/")
+  :on-path "topics")
+
+(define-resource value ()
+  :class (s-prefix "leuven:Observation")
+  :properties `((:value :number ,(s-prefix "leuven:value")))
+  :has-many `((topic :via ,(s-prefix "ext:hasTopic")
+                     :as "topics"))
+  :resource-base (s-url "http://stad.tenforce.com/values/")
+  :on-path "values")
