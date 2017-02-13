@@ -67,8 +67,9 @@
 ;;
 
 (define-resource topic ()
-  :class (s-prefix "leuven:Topic")
+  :class (s-prefix "stad-stat:Topic")
   :properties `((:title :string ,(s-prefix "dct:title")))
+  :features '(no-pagination-defaults)
   :has-many `((value :via ,(s-prefix "ext:hasTopic")
                      :inverse t
                      :as "values"))
@@ -76,8 +77,8 @@
   :on-path "topics")
 
 (define-resource value ()
-  :class (s-prefix "leuven:Observation")
-  :properties `((:value :number ,(s-prefix "leuven:value")))
+  :class (s-prefix "stad-stat:Observation")
+  :properties `((:value :number ,(s-prefix "stad-stat:value")))
   :has-many `((topic :via ,(s-prefix "ext:hasTopic")
                      :as "topics"))
   :resource-base (s-url "http://stad.tenforce.com/values/")

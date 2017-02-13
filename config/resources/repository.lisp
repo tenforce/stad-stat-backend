@@ -32,4 +32,4 @@
 ;; by them and that it shouldn't be used for permanent URIs.
 
 (add-prefix "ext" "http://mu.semte.ch/vocabularies/ext/")
-(add-prefix "leuven" "http://leuven.be/")
+(add-prefix "stad-stat" "http://tenforce.com/voc/stad-stat/")
