@@ -1,0 +1,236 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix sesame: <http://www.openrdf.org/schema/sesame#> .
+@prefix fn: <http://www.w3.org/2005/xpath-functions#> .
+@prefix mu: <http://mu.semte.ch/vocabularies/core/> .
+@prefix dct: <http://purl.org/dc/terms/>.
+
+<http://leuven.be/topics/Ziekteverspreiding>
+  a <http://leuven.be/voc/Topic>;
+  mu:uuid "aoeue9a8ouaoe0";
+  dct:title "Ziekteverspreiding".
+
+<http://leuven.be/topics/Algemene%20ziekten%20en%20verslavingen>
+  a <http://leuven.be/voc/Topic>;
+  mu:uuid "24402y924gy24408oue";
+  dct:title "Algemene ziekten en verslavingen".
+
+<http://leuven.be/topics/Griep>
+  a <http://leuven.be/voc/Topic>;
+  mu:uuid "au023hunthu05";
+  dct:title "Griep".
+
+<http://leuven.be/topics/Alcoholverslaving>
+  a <http://leuven.be/voc/Topic>;
+  mu:uuid "029420gy240y9g53";
+  dct:title "Alcoholverslaving".
+
+
+
+<http://leuven.be/regions/Leuven>
+  a <http://leuven.be/voc/Topic>;
+  a <http://leuven.be/voc/Region>;
+  mu:uuid "oucu02uu2v4n24240";
+  dct:title "Leuven".
+
+<http://leuven.be/regions/Campus%20arenberg>
+  a <http://leuven.be/voc/Topic>;
+  a <http://leuven.be/voc/Region>;
+  mu:uuid "aosu023ubv55th45r0";
+  dct:title "Campus arenberg".
+
+<http://leuven.be/regions/Sint-Maartensdal>
+  a <http://leuven.be/voc/Topic>;
+  a <http://leuven.be/voc/Region>;
+  mu:uuid "28034nht5y065h";
+  dct:title "Sint-Maartensdal".
+
+
+
+<http://leuven.be/themes/Ziekteverspreiding/Algemene%20ziekten%20en%20verslavingen/Griep>
+  a <http://leuven.be/voc/Theme>;
+  mu:uuid "u043chr34ch03";
+  dct:title "Griep - Algemene ziekten en verslavingen - Ziekteverspreiding";
+  <http://leuven.be/voc/hasTopic> <http://leuven.be/topics/Ziekteverspreiding>,
+                                  <http://leuven.be/topics/Algemene%20ziekten%20en%20verslavingen>,
+                                  <http://leuven.be/topics/Griep>.
+
+<http://leuven.be/region-themes/Ziekteverspreiding/Algemene%20ziekten%20en%20verslavingen/Griep/Leuven>
+  a <http://leuven.be/voc/RegionTheme>;
+  mu:uuid "ahcrl34lr53l3s";
+  dct:title "Griep - Algemene ziekten en verslavingen - Leuven - Ziekteverspreiding";
+  <http://leuven.be/voc/hasTheme> <http://leuven.be/themes/Ziekteverspreiding/Algemene%20ziekten%20en%20verslavingen/Griep>;
+  <http://leuven.be/voc/hasRegion> <http://leuven.be/regions/Leuven>.
+
+<http://leuven.be/region-themes/Ziekteverspreiding/Algemene%20ziekten%20en%20verslavingen/Griep/Campus%20Arenberg>
+  a <http://leuven.be/voc/RegionTheme>;
+  mu:uuid "asonenhu0434hrhy054";
+  dct:title "Griep - Algemene ziekten en verslavingen - Campus Arenberg - Ziekteverspreiding";
+  <http://leuven.be/voc/hasTheme> <http://leuven.be/themes/Ziekteverspreiding/Algemene%20ziekten%20en%20verslavingen/Griep>;
+  <http://leuven.be/voc/hasRegion> <http://leuven.be/regions/Campus%20arenberg>.
+
+<http://leuven.be/region-themes/Ziekteverspreiding/Algemene%20ziekten%20en%20verslavingen/Griep/Sint-Maartensdal>
+  a <http://leuven.be/voc/RegionTheme>;
+  mu:uuid "2408g134hp8013454";
+  dct:title "Griep - Algemene ziekten en verslavingen - Sint-Maartensdal - Ziekteverspreiding";
+  <http://leuven.be/voc/hasTheme> <http://leuven.be/themes/Ziekteverspreiding/Algemene%20ziekten%20en%20verslavingen/Griep>;
+  <http://leuven.be/voc/hasRegion> <http://leuven.be/regions/Sint-Maartensdal>.
+
+
+
+<http://leuven.be/themes/Ziekteverspreiding/Algemene%20ziekten%20en%20verslavingen/Alcoholverslaving>
+  a <http://leuven.be/voc/Theme>;
+  mu:uuid "asnothtul4c3hu34nthu34";
+  dct:title "Alcoholverslaving - Algemene ziekten en verslavingen - Ziekteverspreiding";
+  <http://leuven.be/voc/hasTopic> <http://leuven.be/topics/Ziekteverspreiding>,
+                                  <http://leuven.be/topics/Algemene%20ziekten%20en%20verslavingen>,
+                                  <http://leuven.be/topics/Alcoholverslaving>.
+
+<http://leuven.be/region-themes/Ziekteverspreiding/Algemene%20ziekten%20en%20verslavingen/Alcoholverslaving/Leuven>
+  a <http://leuven.be/voc/RegionTheme>;
+  mu:uuid "asontehtu34nhsun54thu34s5";
+  dct:title "Alcoholverslaving - Algemene ziekten en verslavingen - Leuven - Ziekteverspreiding";
+  <http://leuven.be/voc/hasTheme> <http://leuven.be/themes/Ziekteverspreiding/Algemene%20ziekten%20en%20verslavingen/Alcoholverslaving>;
+  <http://leuven.be/voc/hasRegion> <http://leuven.be/regions/Leuven>.
+
+<http://leuven.be/region-themes/Ziekteverspreiding/Algemene%20ziekten%20en%20verslavingen/Alcoholverslaving/Campus%20Arenberg>
+  a <http://leuven.be/voc/RegionTheme>;
+  mu:uuid "sn5tth2s5n4th345s452s";
+  dct:title "Alcoholverslaving - Algemene ziekten en verslavingen - Campus Arenberg - Ziekteverspreiding";
+  <http://leuven.be/voc/hasTheme> <http://leuven.be/themes/Ziekteverspreiding/Algemene%20ziekten%20en%20verslavingen/Alcoholverslaving>;
+  <http://leuven.be/voc/hasRegion> <http://leuven.be/regions/Campus%20arenberg>.
+
+<http://leuven.be/region-themes/Ziekteverspreiding/Algemene%20ziekten%20en%20verslavingen/Alcoholverslaving/Sint-Maartensdal>
+  a <http://leuven.be/voc/RegionTheme>;
+  mu:uuid "snh23snth23sn6th325sn";
+  dct:title "Alcoholverslaving - Algemene ziekten en verslavingen - Sint-Maartensdal - Ziekteverspreiding";
+  <http://leuven.be/voc/hasTheme> <http://leuven.be/themes/Ziekteverspreiding/Algemene%20ziekten%20en%20verslavingen/Alcoholverslaving>;
+  <http://leuven.be/voc/hasRegion> <http://leuven.be/regions/Sint-Maartensdal>.
+
+
+<http://leuven.be/values/09873243snththt342y>
+  a <http://leuven.be/voc/Value>;
+  mu:uuid "09873243snththt342y";
+  <http://leuven.be/voc/hasRegionTheme> <http://leuven.be/region-themes/Ziekteverspreiding/Algemene%20ziekten%20en%20verslavingen/Griep/Leuven>;
+  <http://leuven.be/voc/year> "2016";
+  <http://leuven.be/voc/value> "100"^^<http://www.w3.org/2001/XMLSchema#int>.
+
+<http://leuven.be/values/snth43nsth32sn43538>
+  a <http://leuven.be/voc/Value>;
+  mu:uuid "snth43nsth32sn43538";
+  <http://leuven.be/voc/hasRegionTheme> <http://leuven.be/region-themes/Ziekteverspreiding/Algemene%20ziekten%20en%20verslavingen/Griep/Leuven>;
+  <http://leuven.be/voc/year> "2015";
+  <http://leuven.be/voc/value> "90"^^<http://www.w3.org/2001/XMLSchema#int>.
+
+<http://leuven.be/values/9082239oeui4n5s6n4t>
+  a <http://leuven.be/voc/Value>;
+  mu:uuid "9082239oeui4n5s6n4t";
+  <http://leuven.be/voc/hasRegionTheme> <http://leuven.be/region-themes/Ziekteverspreiding/Algemene%20ziekten%20en%20verslavingen/Griep/Leuven>;
+  <http://leuven.be/voc/year> "2014";
+  <http://leuven.be/voc/value> "110"^^<http://www.w3.org/2001/XMLSchema#int>.
+
+<http://leuven.be/values/098235ysntt45fsn3th>
+  a <http://leuven.be/voc/Value>;
+  mu:uuid "098235ysntt45fsn3th";
+  <http://leuven.be/voc/hasRegionTheme> <http://leuven.be/region-themes/Ziekteverspreiding/Algemene%20ziekten%20en%20verslavingen/Griep/Leuven>;
+  <http://leuven.be/voc/year> "2013";
+  <http://leuven.be/voc/value> "130"^^<http://www.w3.org/2001/XMLSchema#int>.
+
+
+<http://leuven.be/values/2334852ns3th5234snn>
+  a <http://leuven.be/voc/Value>;
+  mu:uuid "2334852ns3th5234snn";
+  <http://leuven.be/voc/hasRegionTheme> <http://leuven.be/region-themes/Ziekteverspreiding/Algemene%20ziekten%20en%20verslavingen/Griep/Campus%20Arenberg>;
+  <http://leuven.be/voc/year> "2016";
+  <http://leuven.be/voc/value> "120"^^<http://www.w3.org/2001/XMLSchema#int>.
+
+<http://leuven.be/values/43stnh32sn5h1sn312>
+  a <http://leuven.be/voc/Value>;
+  mu:uuid "43stnh32sn5h1sn312";
+  <http://leuven.be/voc/hasRegionTheme> <http://leuven.be/region-themes/Ziekteverspreiding/Algemene%20ziekten%20en%20verslavingen/Griep/Campus%20Arenberg>;
+  <http://leuven.be/voc/year> "2015";
+  <http://leuven.be/voc/value> "115"^^<http://www.w3.org/2001/XMLSchema#int>.
+
+<http://leuven.be/values/sn52534b2w345x234d5i>
+  a <http://leuven.be/voc/Value>;
+  mu:uuid "sn52534b2w345x234d5i";
+  <http://leuven.be/voc/hasRegionTheme> <http://leuven.be/region-themes/Ziekteverspreiding/Algemene%20ziekten%20en%20verslavingen/Griep/Campus%20Arenberg>;
+  <http://leuven.be/voc/year> "2014";
+  <http://leuven.be/voc/value> "130"^^<http://www.w3.org/2001/XMLSchema#int>.
+
+
+<http://leuven.be/values/snah34snth2sn6h0aoei8>
+  a <http://leuven.be/voc/Value>;
+  mu:uuid "snah34snth2sn6h0aoei8";
+  <http://leuven.be/voc/hasRegionTheme> <http://leuven.be/region-themes/Ziekteverspreiding/Algemene%20ziekten%20en%20verslavingen/Griep/Sint-Maartensdal>;
+  <http://leuven.be/voc/year> "2015";
+  <http://leuven.be/voc/value> "190"^^<http://www.w3.org/2001/XMLSchema#int>.
+
+<http://leuven.be/values/ns43htaloeuaoelrcuro0aee>
+  a <http://leuven.be/voc/Value>;
+  mu:uuid "ns43htaloeuaoelrcuro0aee";
+  <http://leuven.be/voc/hasRegionTheme> <http://leuven.be/region-themes/Ziekteverspreiding/Algemene%20ziekten%20en%20verslavingen/Griep/Sint-Maartensdal>;
+  <http://leuven.be/voc/year> "2014";
+  <http://leuven.be/voc/value> "210"^^<http://www.w3.org/2001/XMLSchema#int>.
+
+
+
+<http://leuven.be/values/voezhiti54hnrcosn>
+  a <http://leuven.be/voc/Value>;
+  mu:uuid "voezhiti54hnrcosn";
+  <http://leuven.be/voc/hasRegionTheme> <http://leuven.be/region-themes/Ziekteverspreiding/Algemene%20ziekten%20en%20verslavingen/Alcoholverslaving/Leuven>;
+  <http://leuven.be/voc/year> "2016";
+  <http://leuven.be/voc/value> "15"^^<http://www.w3.org/2001/XMLSchema#int>.
+
+<http://leuven.be/values/aosnh5syn2y59890eou>
+  a <http://leuven.be/voc/Value>;
+  mu:uuid "aosnh5syn2y59890eou";
+  <http://leuven.be/voc/hasRegionTheme> <http://leuven.be/region-themes/Ziekteverspreiding/Algemene%20ziekten%20en%20verslavingen/Alcoholverslaving/Leuven>;
+  <http://leuven.be/voc/year> "2015";
+  <http://leuven.be/voc/value> "17"^^<http://www.w3.org/2001/XMLSchema#int>.
+
+<http://leuven.be/values/908oeui09oe87ui0o9ens>
+  a <http://leuven.be/voc/Value>;
+  mu:uuid "908oeui09oe87ui0o9ens";
+  <http://leuven.be/voc/hasRegionTheme> <http://leuven.be/region-themes/Ziekteverspreiding/Algemene%20ziekten%20en%20verslavingen/Alcoholverslaving/Leuven>;
+  <http://leuven.be/voc/year> "2014";
+  <http://leuven.be/voc/value> "20"^^<http://www.w3.org/2001/XMLSchema#int>.
+
+
+<http://leuven.be/values/snathmbktnhqj45ss2>
+  a <http://leuven.be/voc/Value>;
+  mu:uuid "snathmbktnhqj45ss2";
+  <http://leuven.be/voc/hasRegionTheme> <http://leuven.be/region-themes/Ziekteverspreiding/Algemene%20ziekten%20en%20verslavingen/Alcoholverslaving/Campus%20Arenberg>;
+  <http://leuven.be/voc/year> "2016";
+  <http://leuven.be/voc/value> "1"^^<http://www.w3.org/2001/XMLSchema#int>.
+
+<http://leuven.be/values/nhsoeug0ufl4f4034l2>
+  a <http://Leuven.be/voc/Value>;
+  mu:uuid "nhsoeug0ufl4f4034l2";
+  <http://leuven.be/voc/hasRegionTheme> <http://leuven.be/region-themes/Ziekteverspreiding/Algemene%20ziekten%20en%20verslavingen/Alcoholverslaving/Campus%20Arenberg>;
+  <http://leuven.be/voc/year> "2015";
+  <http://leuven.be/voc/value> "2"^^<http://www.w3.org/2001/XMLSchema#int>.
+
+<http://leuven.be/values/908feia4h3d23snt4313s>
+  a <http://leuven.be/voc/Value>;
+  mu:uuid "908feia4h3d23snt4313s";
+  <http://leuven.be/voc/hasRegionTheme> <http://leuven.be/region-themes/Ziekteverspreiding/Algemene%20ziekten%20en%20verslavingen/Alcoholverslaving/Campus%20Arenberg>;
+  <http://leuven.be/voc/year> "2014";
+  <http://leuven.be/voc/value> "2"^^<http://www.w3.org/2001/XMLSchema#int>.
+
+
+<http://leuven.be/values/908eou34snt324sn1h134>
+  a <http://leuven.be/voc/Value>;
+  mu:uuid "908eou34snt324sn1h134";
+  <http://leuven.be/voc/hasRegionTheme> <http://leuven.be/region-themes/Ziekteverspreiding/Algemene%20ziekten%20en%20verslavingen/Alcoholverslaving/Sint-Maartensdal>;
+  <http://leuven.be/voc/year> "2015";
+  <http://leuven.be/voc/value> "16"^^<http://www.w3.org/2001/XMLSchema#int>.
+
+<http://leuven.be/values/nhs34nh4pa98ouhs3h>
+  a <http://leuven.be/voc/Value>;
+  mu:uuid "nhs34nh4pa98ouhs3h";
+  <http://leuven.be/voc/hasRegionTheme> <http://leuven.be/region-themes/Ziekteverspreiding/Algemene%20ziekten%20en%20verslavingen/Alcoholverslaving/Sint-Maartensdal>;
+  <http://leuven.be/voc/year> "2014";
+  <http://leuven.be/voc/value> "18"^^<http://www.w3.org/2001/XMLSchema#int>.
