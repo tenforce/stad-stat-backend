@@ -26,6 +26,18 @@ defmodule Dispatcher do
     Proxy.forward conn, path, "http://resource/topics/"
   end
 
+  match "/regions/*path" do
+    Proxy.forward conn, path, "http://resource/regions/"
+  end
+
+  match "/themes/*path" do
+    Proxy.forward conn, path, "http://resource/themes/"
+  end
+
+  match "/region-themes/*path" do
+    Proxy.forward conn, path, "http://resource/region-themes/"
+  end
+
   match "/values/*path" do
     Proxy.forward conn, path, "http://resource/values/"
   end

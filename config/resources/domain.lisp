@@ -66,19 +66,55 @@
 
 ;;
 
+
+
 (define-resource topic ()
-  :class (s-prefix "leuven:Topic")
+  :class (s-prefix "lvoc:Topic")
   :properties `((:title :string ,(s-prefix "dct:title")))
-  :has-many `((value :via ,(s-prefix "ext:hasTopic")
+  :has-many `((theme :via ,(s-prefix "lvoc:hasTopic")
                      :inverse t
-                     :as "values"))
-  :resource-base (s-url "http://stad.tenforce.com/topics/")
+                     :as "themes"))
+  :resource-base (s-url "http://leuven.be/topics/")
   :on-path "topics")
 
+(define-resource region ()
+  :class (s-prefix "lvoc:Region")
+  :properties `((:title :string ,(s-prefix "dct:title")))
+  :has-many `((region-theme :via ,(s-prefix "lvoc:hasRegion")
+                     :inverse t
+                     :as "region-themes"))
+  :resource-base (s-url "http://leuven.be/regions/")
+  :on-path "regions")
+
+(define-resource theme ()
+  :class (s-prefix "lvoc:Theme")
+  :properties `((:title :string ,(s-prefix "dct:title")))
+  :has-many `((topic :via ,(s-prefix "lvoc:hasTopic")
+                     :as "topics")
+              (region-theme :via ,(s-prefix "lvoc:hasTheme")
+                     :inverse t
+                     :as "region-themes"))
+  :resource-base (s-url "http://leuven.be/themes/")
+  :on-path "themes")
+
+(define-resource region-theme ()
+  :class (s-prefix "lvoc:RegionTheme")
+  :properties `((:title :string ,(s-prefix "dct:title")))
+  :has-many `((value :via ,(s-prefix "lvoc:hasRegionTheme")
+                     :inverse t
+                     :as "values"))
+  :has-one `((theme :via ,(s-prefix "lvoc:hasTheme")
+                    :as "theme")
+             (region :via ,(s-prefix "lvoc:hasRegion")
+                    :as "region"))
+  :resource-base (s-url "http;//leuven.be/region-themes/")
+  :on-path "region-themes")
+
 (define-resource value ()
-  :class (s-prefix "leuven:Observation")
-  :properties `((:value :number ,(s-prefix "leuven:value")))
-  :has-many `((topic :via ,(s-prefix "ext:hasTopic")
-                     :as "topics"))
-  :resource-base (s-url "http://stad.tenforce.com/values/")
+  :class (s-prefix "lvoc:Value")
+  :properties `((:value :number ,(s-prefix "lvoc:value"))
+                (:year :string ,(s-prefix "lvoc:year")))
+  :has-one `((region-theme :via ,(s-prefix "lvoc:hasRegionTheme")
+                    :as "region-theme"))
+  :resource-base (s-url "http://leuven.be/values/")
   :on-path "values")

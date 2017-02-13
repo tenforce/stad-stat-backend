@@ -33,3 +33,4 @@
 
 (add-prefix "ext" "http://mu.semte.ch/vocabularies/ext/")
 (add-prefix "leuven" "http://leuven.be/")
+(add-prefix "lvoc" "http://leuven.be/voc/")
