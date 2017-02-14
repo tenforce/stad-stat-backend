@@ -27,22 +27,17 @@
   mu:uuid "029420gy240y9g53";
   dct:title "Alcoholverslaving".
 
-
-
 <http://leuven.be/regions/Leuven>
-  a <http://leuven.be/voc/Topic>;
   a <http://leuven.be/voc/Region>;
   mu:uuid "oucu02uu2v4n24240";
   dct:title "Leuven".
 
 <http://leuven.be/regions/Campus%20arenberg>
-  a <http://leuven.be/voc/Topic>;
   a <http://leuven.be/voc/Region>;
   mu:uuid "aosu023ubv55th45r0";
   dct:title "Campus arenberg".
 
 <http://leuven.be/regions/Sint-Maartensdal>
-  a <http://leuven.be/voc/Topic>;
   a <http://leuven.be/voc/Region>;
   mu:uuid "28034nht5y065h";
   dct:title "Sint-Maartensdal".
